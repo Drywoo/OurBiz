@@ -16,6 +16,8 @@ import UIKit
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var cardInfoObject : CardInfoObject?
+    
     private let scanLabel = UILabel().then {
         $0.text = "명함을 정확히 인식시켜주세요"
         $0.font = UIFont.boldSystemFont(ofSize: 20)
@@ -130,8 +132,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 let resultText = result.text
                 DispatchQueue.main.async {
                     self.extractInformation(from: resultText)
-                    
-                    self.navigationController?.pushViewController(EditCardInfoViewController(), animated: true)
+                    let vc = EditCardInfoViewController()
+                    vc.cardInfoObject = self.cardInfoObject
+                    self.navigationController?.pushViewController(vc, animated: true)
                     self.navigationController?.viewControllers.removeLast()
                 }
             }
@@ -149,20 +152,25 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         if let nameMatch = text.range(of: namePattern, options: .regularExpression) {
             let name = String(text[nameMatch])
             print("이름: \(name)")
-            CardInfo.save(.username, name)
-
+            cardInfoObject = CardInfoObject()
+            cardInfoObject!.name = name
+            
+//            CardInfo.save(.username, name)
             if let emailMatch = text.range(of: emailPattern, options: .regularExpression) {
                 let email = String(text[emailMatch])
+                cardInfoObject!.email = email
                 print("이메일: \(email)")
-                CardInfo.save(.email, email)
+//                CardInfo.save(.email, email)
                 
                 if let phoneNumberMatch = text.range(of: phoneNumberPattern, options: .regularExpression) {
                     let phoneNumber = String(text[phoneNumberMatch])
-                    print("전화번호: \(phoneNumber)")
-                    CardInfo.save(.tel, phoneNumber)
-                    
+                    cardInfoObject!.phone = phoneNumber
+//                    print("전화번호: \(phoneNumber)")
+//                    CardInfo.save(.tel, phoneNumber)
                 }
             }
+            
+//            CardInfo.save(cardInfoObject!)
         }
     }
     

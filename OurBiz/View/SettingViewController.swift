@@ -22,8 +22,13 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
 
+        // 테이블 뷰의 배경색 설정
+        tableView.backgroundColor = .white
+
         // 테이블 뷰를 루트 뷰에 추가
         view.addSubview(tableView)
+        
+
 
         // 테이블 뷰의 셀 등록
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SettingCell")
@@ -38,6 +43,13 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath)
         cell.textLabel?.text = settings[indexPath.row]
+
+        // 셀의 글자 색 설정
+        cell.textLabel?.textColor = .black
+
+        // 셀의 배경색 설정
+        cell.backgroundColor = .white
+
         return cell
     }
 
@@ -49,10 +61,9 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
             UserInfo.remove(.username)
             UserInfo.remove(.password)
             UserInfo.remove(.email)
-          //  UserInfo.remove(.tel)
+            // UserInfo.remove(.tel)
             navigationController?.pushViewController(loginViewController, animated: true)
         }
         print("선택된 설정: \(settings[indexPath.row])")
     }
 }
-

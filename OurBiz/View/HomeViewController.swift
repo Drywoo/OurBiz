@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     private let myBusinessCard = UIView().then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = UIColor(hexCode: "#F6F6F6")
         $0.layer.cornerRadius = 10
         $0.layer.shadowColor = UIColor.black.cgColor
     }
@@ -58,12 +58,6 @@ class HomeViewController: UIViewController {
         $0.contentMode = .scaleAspectFill
     }
     
-    private let mytoday = UIView().then {
-        $0.backgroundColor = .black
-        $0.layer.cornerRadius = 10
-        $0.layer.shadowColor = UIColor.black.cgColor
-    }
-    
     private let logoLabel = UILabel().then {
         $0.text = "OurBiz"
         $0.font = UIFont.boldSystemFont(ofSize: 35)
@@ -73,7 +67,7 @@ class HomeViewController: UIViewController {
     }
     
     private let schaduleView = UIView().then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = UIColor(hexCode: "#F6F6F6")
         $0.layer.cornerRadius = 10
         $0.layer.shadowColor = UIColor.black.cgColor
     }
@@ -91,7 +85,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(hexCode: "#b2dcd5")
+        view.backgroundColor = .white
+        title = "홈"
         setup()
         setupSubviews()
         setupConstraints()
@@ -234,8 +229,8 @@ class HomeViewController: UIViewController {
     }
     
     private func myBusinessCardEditButtonTapped() {
-        let tel = CardInfo.get(.tel)!
-        print(tel)
+//        let tel = CardInfo.get(.tel)!
+//        print(tel)
         
     }
     

@@ -16,19 +16,19 @@ class JoinViewController: UIViewController {
     private let logoLabel = UILabel().then {
         $0.text = "OurBiz"
         $0.font = UIFont.boldSystemFont(ofSize: 25)
-        $0.textColor = UIColor(named: "DarkMode_Reverse")
+        $0.textColor = .white
         $0.textAlignment = .center
     }
     
     private let idText = UILabel().then {
         $0.text = "이름을 입력해주세요"
         $0.font = UIFont.systemFont(ofSize: 10)
-        $0.textColor = UIColor(named: "DarkMode_Reverse")
+        $0.textColor = .black
     }
     private let idTextField = UITextField().then {
         $0.placeholder = "아이디"
         $0.font = UIFont.boldSystemFont(ofSize: 15)
-        $0.textColor = UIColor(named: "DarkMode_Reverse")
+        $0.textColor = .black
         $0.layer.backgroundColor = UIColor(named: "DarkMode")?.cgColor
         $0.layer.cornerRadius = 10
         $0.layer.shadowColor = UIColor.black.cgColor
@@ -38,14 +38,13 @@ class JoinViewController: UIViewController {
     private let passwordText = UILabel().then {
         $0.text = "사용하실 비밀번호를 입력해주세요"
         $0.font = UIFont.systemFont(ofSize: 10)
-        $0.textColor = UIColor(named: "DarkMode_Reverse")
+        $0.textColor = .black
     }
     
     private let passwordTextField = UITextField().then {
         $0.placeholder = "비밀번호"
-        $0.isSecureTextEntry = true
         $0.font = UIFont.boldSystemFont(ofSize: 15)
-        $0.textColor = UIColor(named: "DarkMode_Reverse")
+        $0.textColor = .black
         $0.layer.backgroundColor = UIColor(named: "DarkMode")?.cgColor
         $0.layer.cornerRadius = 10
         $0.layer.shadowColor = UIColor.black.cgColor
@@ -53,16 +52,15 @@ class JoinViewController: UIViewController {
     }
     
     private let telText = UILabel().then {
-        $0.text = "전화번호"
+        $0.text = "전화번호를 입력해주세요"
         $0.font = UIFont.systemFont(ofSize: 10)
-        $0.textColor = UIColor(named: "DarkMode_Reverse")
+        $0.textColor = .black
     }
     
     private let telTextField = UITextField().then {
-        $0.placeholder = "전화번호를 입력해주세요"
-        $0.isSecureTextEntry = true
+        $0.placeholder = "전화번호"
         $0.font = UIFont.boldSystemFont(ofSize: 15)
-        $0.textColor = UIColor(named: "DarkMode_Reverse")
+        $0.textColor = .black
         $0.layer.backgroundColor = UIColor(named: "DarkMode")?.cgColor
         $0.layer.cornerRadius = 10
         $0.layer.shadowColor = UIColor.black.cgColor
@@ -70,16 +68,15 @@ class JoinViewController: UIViewController {
     }
     
     private let emailText = UILabel().then {
-        $0.text = "이메일"
+        $0.text = "이메일을 입력해주세요"
         $0.font = UIFont.systemFont(ofSize: 10)
-        $0.textColor = UIColor(named: "DarkMode_Reverse")
+        $0.textColor = .black
     }
     
     private let emailTextField = UITextField().then {
-        $0.placeholder = "이메일을 입력해주세요"
-        $0.isSecureTextEntry = true
+        $0.placeholder = "이메일"
         $0.font = UIFont.boldSystemFont(ofSize: 15)
-        $0.textColor = UIColor(named: "DarkMode_Reverse")
+        $0.textColor = .black
         $0.layer.backgroundColor = UIColor(named: "DarkMode")?.cgColor
         $0.layer.cornerRadius = 10
         $0.layer.shadowColor = UIColor.black.cgColor
@@ -87,7 +84,7 @@ class JoinViewController: UIViewController {
     }
     
     private let nextStepBtn = UIButton().then {
-        $0.setImage(UIImage(named: "TakePhotoBtn"), for: .normal)
+        $0.setImage(UIImage(named: "NextBtn"), for: .normal)
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     

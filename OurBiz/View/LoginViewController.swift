@@ -18,13 +18,13 @@ class LoginViewController: UIViewController {
     private let logoLabel = UILabel().then {
         $0.text = "OurBiz"
         $0.font = UIFont.boldSystemFont(ofSize: 35)
-        $0.textColor = UIColor(named: "DarkMode")
+        $0.textColor = .black
         $0.textAlignment = .center
     }
     
     private let idTextField = UITextField().then {
-        $0.placeholder = "아이디"
-        $0.backgroundColor = UIColor(named: "DarkMode")
+        $0.placeholder = "이메일"
+        $0.backgroundColor = UIColor(hexCode: "#F2F2F2")
         $0.borderStyle = .roundedRect
         $0.textColor = .black
         $0.setPlaceholderColor(.systemGray)
@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
     
     private let passwordTextField = UITextField().then {
         $0.placeholder = "비밀번호"
-        $0.backgroundColor = UIColor(named: "DarkMode")
+        $0.backgroundColor = UIColor(hexCode: "#F2F2F2")
         $0.borderStyle = .roundedRect
         $0.textColor = .black
         $0.setPlaceholderColor(.systemGray)
@@ -42,14 +42,14 @@ class LoginViewController: UIViewController {
     
     private let loginButton = UIButton().then {
         $0.setTitle("로그인", for: .normal)
-        $0.setTitleColor(UIColor(named: "DarkMode_Reverse"), for: .normal)
-        $0.backgroundColor = UIColor(named: "DarkMode")
+        $0.setTitleColor(UIColor(hexCode: "#FFFFFF"), for: .normal)
+        $0.backgroundColor = .black
         $0.layer.cornerRadius = 10
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         setupSubviews()
         setupConstraints()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))

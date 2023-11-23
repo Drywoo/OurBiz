@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42645E00A5E273A70F82657B /* Pods_OurBizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43810058B656492BEDAA9DA1 /* Pods_OurBizTests.framework */; };
-		58385F882B0CF2A000962187 /* CardInfoArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58385F872B0CF2A000962187 /* CardInfoArray.swift */; };
+		580AA9102B0E03750053D71D /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580AA90F2B0E03750053D71D /* AddTaskViewController.swift */; };
 		585FE1292B09C49800877465 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FE1282B09C49800877465 /* Placeholder.swift */; };
 		585FE12B2B0A19AA00877465 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FE12A2B0A19AA00877465 /* JoinViewController.swift */; };
 		58614B3B2B08FB6B007FF249 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58614B3A2B08FB6A007FF249 /* LoginViewController.swift */; };
@@ -31,7 +31,6 @@
 		58E743B12B0C244C008300AC /* CardInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E743B02B0C244C008300AC /* CardInfoData.swift */; };
 		58E743B32B0C26B2008300AC /* EditCardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E743B22B0C26B2008300AC /* EditCardInfoViewController.swift */; };
 		58E743B72B0C2B46008300AC /* HexCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E743B62B0C2B46008300AC /* HexCode.swift */; };
-		58E743B92B0C2C26008300AC /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E743B82B0C2C26008300AC /* AddCardViewController.swift */; };
 		58E743BB2B0C2DA8008300AC /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E743BA2B0C2DA8008300AC /* UserInfoData.swift */; };
 		58E743BE2B0C4106008300AC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E743BD2B0C4106008300AC /* SettingViewController.swift */; };
 		58E743C02B0C4163008300AC /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E743BF2B0C4163008300AC /* ScheduleViewController.swift */; };
@@ -60,7 +59,7 @@
 		08B32C14B3F5300C63819F32 /* Pods-OurBiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurBiz.debug.xcconfig"; path = "Target Support Files/Pods-OurBiz/Pods-OurBiz.debug.xcconfig"; sourceTree = "<group>"; };
 		43810058B656492BEDAA9DA1 /* Pods_OurBizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OurBizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522BE0A5C0B320E6378DF4D0 /* Pods-OurBiz-OurBizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurBiz-OurBizUITests.release.xcconfig"; path = "Target Support Files/Pods-OurBiz-OurBizUITests/Pods-OurBiz-OurBizUITests.release.xcconfig"; sourceTree = "<group>"; };
-		58385F872B0CF2A000962187 /* CardInfoArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoArray.swift; sourceTree = "<group>"; };
+		580AA90F2B0E03750053D71D /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		585FE1282B09C49800877465 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		585FE12A2B0A19AA00877465 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		58614B3A2B08FB6A007FF249 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +86,6 @@
 		58E743B02B0C244C008300AC /* CardInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoData.swift; sourceTree = "<group>"; };
 		58E743B22B0C26B2008300AC /* EditCardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardInfoViewController.swift; sourceTree = "<group>"; };
 		58E743B62B0C2B46008300AC /* HexCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCode.swift; sourceTree = "<group>"; };
-		58E743B82B0C2C26008300AC /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		58E743BA2B0C2DA8008300AC /* UserInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
 		58E743BD2B0C4106008300AC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		58E743BF2B0C4163008300AC /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				58DF64492B0B8DCA00696DC0 /* MLModel.swift */,
 				58E743B02B0C244C008300AC /* CardInfoData.swift */,
 				58E743BA2B0C2DA8008300AC /* UserInfoData.swift */,
-				58385F872B0CF2A000962187 /* CardInfoArray.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,9 +225,9 @@
 				585FE12A2B0A19AA00877465 /* JoinViewController.swift */,
 				58DF644B2B0B91A900696DC0 /* BusinessCardListViewController.swift */,
 				58E743B22B0C26B2008300AC /* EditCardInfoViewController.swift */,
-				58E743B82B0C2C26008300AC /* AddCardViewController.swift */,
 				58E743BD2B0C4106008300AC /* SettingViewController.swift */,
 				58E743BF2B0C4163008300AC /* ScheduleViewController.swift */,
+				580AA90F2B0E03750053D71D /* AddTaskViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -571,9 +568,8 @@
 				588D84BA2AFBD318008227AA /* Coordinator.swift in Sources */,
 				586409EF2B05B067005CA986 /* CameraViewController.swift in Sources */,
 				58E743B72B0C2B46008300AC /* HexCode.swift in Sources */,
-				58E743B92B0C2C26008300AC /* AddCardViewController.swift in Sources */,
-				58385F882B0CF2A000962187 /* CardInfoArray.swift in Sources */,
 				58E743C02B0C4163008300AC /* ScheduleViewController.swift in Sources */,
+				580AA9102B0E03750053D71D /* AddTaskViewController.swift in Sources */,
 				588D84892AFBCE7A008227AA /* LoginSelectViewController.swift in Sources */,
 				5876C68F2B065F9C00FBBF86 /* HomeViewController.swift in Sources */,
 				588D84852AFBCE7A008227AA /* AppDelegate.swift in Sources */,

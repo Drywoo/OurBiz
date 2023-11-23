@@ -12,6 +12,8 @@ import Then
 
 class EditCardInfoViewController: UIViewController {
     
+    var cardInfoObject : CardInfoObject?
+    
     private let EditText = UILabel().then {
         $0.text = "명함 정보 수정"
         $0.font = UIFont.boldSystemFont(ofSize: 20)
@@ -81,16 +83,20 @@ class EditCardInfoViewController: UIViewController {
         view.backgroundColor = .white
         setupSubviews()
         setupConstraints()
+        setup()
     }
     
     func setup() {
-        let email = CardInfo.get(.email)!
-        let name = CardInfo.get(.username)!
-        let tel = CardInfo.get(.tel)!
+//        let email = CardInfo.get(.email)!
+//        let name = CardInfo.get(.username)!
+//        let tel = CardInfo.get(.tel)!
         
-        emailTextField.text = "\(email)"
-        nameTextField.text = "\(name)"
-        telTextField.text = "\(tel)"
+        if let cardInfoObject = self.cardInfoObject {
+            emailTextField.text = "\(cardInfoObject.email)"
+            nameTextField.text = "\(cardInfoObject.name)"
+            telTextField.text = "\(cardInfoObject.phone)"
+        }
+        
     }
     
     
@@ -162,9 +168,28 @@ class EditCardInfoViewController: UIViewController {
     
     @objc func saveButtonTapped() {
         
-        CardInfo.save(.username, nameTextField.text! )
-        CardInfo.save(.email, emailTextField.text!)
-        CardInfo.save(.tel, telTextField.text!)
-
+        if let name = self.nameTextField.text {
+            self.cardInfoObject?.name = name
+        }
+        
+        if let phone = self.telTextField.text {
+            self.cardInfoObject?.phone = phone
+        }
+        
+        if let email = self.emailTextField.text {
+            self.cardInfoObject?.email = email
+        }
+        self.showAlert(message: "저장되었습니다.")
+        CardInfo.save(self.cardInfoObject)
+        self.dismiss(animated: true) {
+            UIApplication.shared.windows.first?.rootViewController = TabBarViewController()
+        }
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

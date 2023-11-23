@@ -29,7 +29,7 @@ class TabBarViewController: UITabBarController {
         let navigationLibrary = UINavigationController(rootViewController: libraryVC)
         let navigationSetting = UINavigationController(rootViewController: settingVC)
         
-        
+        tabBar.barTintColor = .white
         setViewControllers([navigationHome, navigationSearch, navigationLibrary,navigationSetting], animated: false)
     }
 }

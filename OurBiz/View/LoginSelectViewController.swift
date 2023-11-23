@@ -24,27 +24,27 @@ class LoginSelectViewController: UIViewController {
     private let logoLabel = UILabel().then {
         $0.text = "OurBiz"
         $0.font = UIFont.boldSystemFont(ofSize: 35)
-        $0.textColor = UIColor(named: "DarkMode")
+        $0.textColor = .black
         $0.textAlignment = .center
     }
     
     private let loginButton = UIButton().then {
         $0.setTitle("로그인", for: .normal)
-        $0.setTitleColor(UIColor(named: "DarkMode_Reverse"), for: .normal)
-        $0.backgroundColor = UIColor(named: "DarkMode")
+        $0.setTitleColor(UIColor(hexCode: "#FFFFFF"), for: .normal)
+        $0.backgroundColor = .black
         $0.layer.cornerRadius = 10
     }
     
     private let joinButton = UIButton().then {
         $0.setTitle("회원가입", for: .normal)
-        $0.setTitleColor(UIColor(named: "DarkMode_Reverse"), for: .normal)
-        $0.backgroundColor = UIColor(named: "DarkMode")
+        $0.setTitleColor(UIColor(hexCode: "#000000"), for: .normal)
+        $0.backgroundColor = UIColor(hexCode: "#D9D9D9")
         $0.layer.cornerRadius = 10
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         loginStackView.addArrangedSubview(loginButton)
         loginStackView.addArrangedSubview(joinButton)
         setupSubviews()
